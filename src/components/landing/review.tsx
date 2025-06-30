@@ -11,19 +11,19 @@ const reviews = [
         name: 'Jeki Permana',
         role: 'Siswa Kelas 11',
         text: `Mode belajarnya keren! Bisa ngobrol sama AI kayak punya tutor pribadi. Aku jadi lebih fokus dan nggak gampang terdistraksi`,
-        image: '/placeholder.jpg',
+        image: '/images/placeholder.jpg',
     },
     {
         name: 'Alika Rahma',
         role: 'Siswi Kelas 10',
         text: `Fourtivity bikin belajar makin asyik! AI-nya paham banget cara ngajarin, aku jadi lebih cepat ngerti materi.`,
-        image: '/placeholder.jpg',
+        image: '/images/placeholder.jpg',
     },
     {
         name: 'Raka Firmansyah',
         role: 'Siswa Kelas 12',
         text: `Nggak nyangka belajar bisa seseru ini. Fourtivity ngebantu aku siapin ujian dengan cara yang beda dan menarik.`,
-        image: '/placeholder.jpg',
+        image: '/images/placeholder.jpg',
     },
 ]
 

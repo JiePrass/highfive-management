@@ -9,7 +9,7 @@ export default function HeroSection() {
             {/* Background Map */}
             <div className="absolute top-32 left-1/2 -translate-x-1/2 md:top-0 md:right-0 md:left-auto md:translate-x-0 w-full md:w-[60%] max-w-[750px] h-full opacity-50 pointer-events-none z-0">
                 <Image
-                    src="/worldmap.png"
+                    src="/images/worldmap.png"
                     alt="Map Background"
                     fill
                     className="object-contain"
@@ -42,7 +42,7 @@ export default function HeroSection() {
                     {/* Big Card (mobile kiri, desktop center) */}
                     <div className="relative w-full h-68 md:h-100 md:mt-8">
                         <Image
-                            src="/placeholder.jpg"
+                            src="/images/placeholder.jpg"
                             alt="Main Card"
                             fill
                             className="object-cover rounded-xl"
@@ -53,7 +53,7 @@ export default function HeroSection() {
                         {/* Top Small */}
                         <div className="relative w-full h-40 md:h-68">
                             <Image
-                                src="/placeholder.jpg"
+                                src="/images/placeholder.jpg"
                                 alt="Top Right Card"
                                 fill
                                 className="object-cover rounded-xl"
@@ -63,7 +63,7 @@ export default function HeroSection() {
                         {/* Bottom Small */}
                         <div className="relative w-full h-24 md:h-40">
                             <Image
-                                src="/placeholder.jpg"
+                                src="/images/placeholder.jpg"
                                 alt="Bottom Right Card"
                                 fill
                                 className="object-cover rounded-xl"
