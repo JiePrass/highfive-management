@@ -25,6 +25,7 @@ export function DesktopNav() {
     const pathname = usePathname()
     const dropdownRef = useRef<HTMLDivElement>(null)
     const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+    const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen)
     const [isMounted, setIsMounted] = useState(false)
 
     useEffect(() => {
@@ -42,17 +43,22 @@ export function DesktopNav() {
     }, [])
 
     return (
-        <>
+        <nav className="hidden md:flex items-center space-x-4 relative">
             {navItems.map((item, idx) =>
                 item.children ? (
                     isMounted && (
                         <div key={idx} className="relative" ref={dropdownRef}>
                             <button
-                                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                                className={cn("flex items-center gap-1 px-3 py-1 text-sm rounded-md transition font-semibold text-muted-foreground hover:text-foreground")}
+                                onClick={toggleDropdown}
+                                className={cn(
+                                    "flex items-center gap-1 px-3 py-1 text-sm rounded-md transition font-semibold text-muted-foreground hover:text-foreground"
+                                )}
                             >
                                 {item.label}
-                                <motion.span animate={{ rotate: isDropdownOpen ? 180 : 0 }} transition={{ duration: 0.2 }}>
+                                <motion.span
+                                    animate={{ rotate: isDropdownOpen ? 180 : 0 }}
+                                    transition={{ duration: 0.2 }}
+                                >
                                     <ChevronDown className="w-4 h-4" />
                                 </motion.span>
                             </button>
@@ -86,13 +92,15 @@ export function DesktopNav() {
                         href={item.href}
                         className={cn(
                             "px-3 py-1 text-sm rounded-md hover:text-foreground transition font-semibold",
-                            pathname === item.href ? "bg-primary text-white rounded-full" : "text-muted-foreground"
+                            pathname === item.href
+                                ? "bg-primary text-white rounded-full"
+                                : "text-muted-foreground"
                         )}
                     >
                         {item.label}
                     </Link>
                 )
             )}
-        </>
+        </nav>
     )
 }

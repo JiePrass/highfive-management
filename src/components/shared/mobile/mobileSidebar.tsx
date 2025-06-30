@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
+import { usePathname } from "next/navigation"
 import { X, ChevronDown, HomeIcon, PackageIcon, FileTextIcon, PhoneIcon } from "lucide-react"
 import { motion, AnimatePresence, Easing } from "framer-motion"
 import { useState } from "react"
@@ -39,6 +40,8 @@ const fadeItem = {
 
 export function MobileSidebar({ isOpen, toggleMenu }: MobileSidebarProps) {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+    const pathname = usePathname()
+
 
     return (
         <AnimatePresence>
@@ -46,7 +49,7 @@ export function MobileSidebar({ isOpen, toggleMenu }: MobileSidebarProps) {
                 <>
                     {/* Overlay */}
                     <motion.div
-                        className="fixed inset-0 bg-black/40 z-40"
+                        className="fixed inset-0 bg-black/40 z-50"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
@@ -59,7 +62,7 @@ export function MobileSidebar({ isOpen, toggleMenu }: MobileSidebarProps) {
                         animate={{ x: 0 }}
                         exit={{ x: "100%" }}
                         transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                        className="fixed inset-y-0 right-0 w-72 bg-neutral-900 text-white z-50 shadow-lg p-6 flex flex-col justify-between"
+                        className="fixed inset-y-0 right-0 w-80 bg-background text-fore-ground z-60 shadow-lg p-6 flex flex-col justify-between"
                     >
                         <motion.div
                             className="space-y-4"
@@ -93,13 +96,14 @@ export function MobileSidebar({ isOpen, toggleMenu }: MobileSidebarProps) {
                             <motion.span variants={fadeItem} className="text-sm text-subtle">Menu</motion.span>
 
                             {/* Mobile Navigation */}
-                            <motion.nav variants={fadeItem} className="flex flex-col mt-2 gap-4">
+                            <motion.nav variants={fadeItem} className="flex flex-col mt-2 gap-2">
                                 {navItems.map((item, idx) =>
                                     item.children ? (
                                         <div key={idx}>
-                                            <button
+                                            <motion.button
+                                                variants={fadeItem}
                                                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                                                className="flex w-full items-center justify-between hover:text-primary transition"
+                                                className="flex px-3 py-2 w-full items-center justify-between hover:text-primary transition"
                                             >
                                                 <div className="flex items-center gap-2">
                                                     {item.icon}
@@ -111,7 +115,7 @@ export function MobileSidebar({ isOpen, toggleMenu }: MobileSidebarProps) {
                                                 >
                                                     <ChevronDown className="w-5 h-5 text-gray-400" />
                                                 </motion.div>
-                                            </button>
+                                            </motion.button>
 
                                             <AnimatePresence initial={false}>
                                                 {isDropdownOpen && (
@@ -126,7 +130,8 @@ export function MobileSidebar({ isOpen, toggleMenu }: MobileSidebarProps) {
                                                             <Link
                                                                 key={subIdx}
                                                                 href={sub.href}
-                                                                className="block text-sm hover:text-primary"
+                                                                className={`block text-sm px-3 py-1 rounded-md transition ${pathname === sub.href ? "bg-primary text-primary-foreground" : "hover:text-primary"
+                                                                    }`}
                                                             >
                                                                 {sub.label}
                                                             </Link>
@@ -140,7 +145,8 @@ export function MobileSidebar({ isOpen, toggleMenu }: MobileSidebarProps) {
                                             key={idx}
                                             href={item.href}
                                             variants={fadeItem}
-                                            className="flex items-center gap-2 hover:text-primary transition"
+                                            className={`flex items-center gap-2 px-3  py-2 rounded-md transition ${pathname === item.href ? "bg-primary text-primary-foreground" : "hover:text-primary"
+                                                }`}
                                         >
                                             {item.icon}
                                             <span>{item.label}</span>

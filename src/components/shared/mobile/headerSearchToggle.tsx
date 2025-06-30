@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { Search } from "lucide-react"
-import { MobileSearchModal } from "./mobile/mobileSearchModal"
+import { MobileSearchModal } from "./mobileSearchModal"
 
 export function HeaderSearchToggle() {
     const [open, setOpen] = useState(false)
