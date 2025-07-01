@@ -4,12 +4,26 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUp } from "lucide-react";
 
+import FacebookIcon from "@/icons/facebook.svg"
+import InstagramIcon from "@/icons/instagram.svg"
+import TwitterIcon from "@/icons/twitter.svg"
+import YouTubeIcon from "@/icons/youtube.svg"
+import TiktokIcon from "@/icons/tiktok.svg"
+
 const navItems = [
     { href: "/", label: "Beranda" },
     { href: "/paket", label: "Paket Wisata" },
     { href: "/artikel", label: "Artikel" },
     { href: "/kontak", label: "Kontak" },
 ]
+
+const icons = {
+    facebook: FacebookIcon,
+    instagram: InstagramIcon,
+    twitter: TwitterIcon,
+    youtube: YouTubeIcon,
+    tiktok: TiktokIcon,
+}
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
@@ -20,7 +34,7 @@ export default function Footer() {
 
     return (
         <footer
-            className="bg-neutral-900 text-white py-8 overflow-hidden"
+            className="text-foreground py-8 overflow-hidden"
         >
             <div
                 className="container mx-auto px-6 md:px-0 flex flex-col md:flex-row md:justify-between md:items-center gap-6"
@@ -91,23 +105,15 @@ export default function Footer() {
                     </div>
                     <div className="flex flex-col gap-2 text-lg">
                         <h2 className="text-[#595A5B] font-semibold">Media Sosial</h2>
-                        <div className="flex gap-4">
-                            {["facebook", "youtube", "instagram", "twitter"].map((platform) => (
-                                <Link
-                                    key={platform}
-                                    href={`https://${platform}.com`}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <Image
-                                        src={`/icons/${platform}.svg`}
-                                        alt={platform}
-                                        width={300}
-                                        height={300}
-                                        className="w-6 h-6 md:w-8 md:h-8 hover:opacity-80 transition"
-                                    />
-                                </Link>
-                            ))}
+                        <div className="flex gap-2">
+                            {["facebook", "youtube", "instagram", "twitter", "tiktok"].map((platform) => {
+                                const Icon = icons[platform as keyof typeof icons]
+                                return (
+                                    <Link key={platform} href={`https://${platform}.com`} target="_blank" rel="noopener noreferrer">
+                                        <Icon className="text-foreground hover:opacity-80 transition inline-block overflow-visible" />
+                                    </Link>
+                                )
+                            })}
                         </div>
                     </div>
                 </div>
@@ -115,16 +121,16 @@ export default function Footer() {
 
             <div className="container mx-auto px-4 md:px-0">
                 <div className="flex justify-center items-center">
-                    <h1 className="text-white text-[90px] md:text-[323px] mb-8 md:mb-16 leading-none font-semibold text-center">
+                    <h1 className="text-[90px] md:text-[323px] cursor-default text-neutral-800 mb-8 md:mb-16 leading-none font-semibold text-center">
                         Highfive
                     </h1>
                 </div>
 
                 <button
                     onClick={scrollToTop}
-                    className="w-full rounded-xl border border-gray-700 px-4 md:px-8 py-4 flex items-center justify-between gap-4 bg-neutral-800 text-sm hover:bg-neutral-700 transition"
+                    className="w-full rounded-xl border border-gray-700 px-4 md:px-8 py-4 flex items-center justify-between gap-4 bg-neutral-800 text-sm hover:bg-neutral-700 transition cursor-pointer"
                 >
-                    <span className="text-left">
+                    <span className="text-left text-white">
                         Kembali Ke<br /> Halaman Paling Atas
                     </span>
                     <div className="bg-white text-black rounded-full p-2">
@@ -133,7 +139,7 @@ export default function Footer() {
                 </button>
             </div>
 
-            <p className="text-xs text-center text-[#595A5B] md:hidden mt-4">
+            <p className="text-xs text-center text-subtle md:hidden mt-4">
                 &copy; {currentYear} Highfive Management seluruh hak cipta dilindungi
             </p>
         </footer>
