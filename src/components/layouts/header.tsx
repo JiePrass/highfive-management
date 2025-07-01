@@ -55,7 +55,7 @@ export function Header() {
 
                     <div className="flex items-center justify-between mx-4 md:mx-0 py-4">
                         <Link href="/" className="text-lg font-semibold flex items-center gap-2">
-                            <Image src="/HFE_Logo.png" alt="Logo" width={40} height={40} />
+                            <Image src="/images/HFE_Logo.png" alt="Logo" width={40} height={40} />
                             <span>Highfive Management</span>
                         </Link>
 
