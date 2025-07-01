@@ -30,7 +30,7 @@ export default function CTA() {
                 >
                     Lorem Ipsum Dolor Sit Amet
                 </h2>
-                <p className="text-lg md:text-xl mb-6">
+                <p className="text-sm md:text-xl mb-6">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio nemo perferendis consectetur aperiam laudantium quasi pariatur odit voluptate aspernatur est.
                 </p>
                 <div className="flex gap-4 justify-center">

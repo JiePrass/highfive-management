@@ -75,7 +75,7 @@ export default function FAQ() {
 
     if (!isReady) {
         return (
-            <section className="relative py-20 container mx-auto px-6 md:px-0">
+            <section className="relative container mx-auto px-6 md:px-0">
                 <div className="w-full items-center mb-12 flex justify-center">
                     <Skeleton className="h-12 w-xl" />
                 </div>

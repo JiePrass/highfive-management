@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function HeroSection() {
     return (
-        <section className="relative w-full overflow-hidden">
+        <section className="relative w-full pt-8 overflow-hidden">
             {/* Background Map */}
             <div className="absolute top-32 left-1/2 -translate-x-1/2 md:top-0 md:right-0 md:left-auto md:translate-x-0 w-full md:w-[60%] max-w-[750px] h-full opacity-50 pointer-events-none z-0">
                 <Image

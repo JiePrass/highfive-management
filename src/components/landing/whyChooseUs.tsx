@@ -4,7 +4,7 @@ export default function WhyChooseUs() {
     return (
         <section className="mx-auto container px-6 md:px-0">
             <div className="flex justify-between items-center mb-4 md:mb-8">
-                <h1 className="text-2xl md:text-5xl font-bold w-full">Kenapa Memilih Kita?</h1>
+                <h1 className="text-2xl md:text-4xl font-semibold w-full">Kenapa Memilih Kita?</h1>
                 <span className="hidden md:block text-sm text-end text-subtle">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit est exercitationem accusamus aspernatur maiores voluptates, ut</span>
             </div>
 
