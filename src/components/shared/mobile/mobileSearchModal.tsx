@@ -54,7 +54,7 @@ export function MobileSearchModal({
                                 value={value}
                                 onChange={(e) => onChange?.(e.target.value)}
                                 placeholder={placeholder || "Cari sesuatu..."}
-                                className="pl-10 pr-10 rounded-full h-10 bg-background"
+                                className="pl-10 pr-10 rounded-full h-10 bg-background dark:bg-background"
                             />
 
                             {/* Tombol close */}

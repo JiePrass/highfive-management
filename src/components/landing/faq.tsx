@@ -1,12 +1,13 @@
 "use client"
 
 import Image from "next/image"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { ChevronDown, ChevronUp } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import Script from "next/script"
 import { Input } from "../ui/input"
 import { Button } from "../ui/button"
+import { Skeleton } from "../ui/skeleton"
 
 const faqs = [
     {
@@ -42,18 +43,22 @@ const faqs = [
 ]
 
 export default function FAQ() {
-    const [activeIndex, setActiveIndex] = useState<number | null>(null);
-    const [message, setMessage] = useState("");
+    const [activeIndex, setActiveIndex] = useState<number | null>(null)
+    const [message, setMessage] = useState("")
+    const [isReady, setIsReady] = useState(false)
 
-    const toggleFAQ = (index: number) => {
-        setActiveIndex((prev) => (prev === index ? null : index));
-    };
+    useEffect(() => {
+        const t = setTimeout(() => setIsReady(true), 300)
+        return () => clearTimeout(t)
+    }, [])
+
+    const toggleFAQ = (index: number) =>
+        setActiveIndex(prev => (prev === index ? null : index))
 
     const handleSend = () => {
-        const phone = "6281234567890"; // Ganti dengan nomor WA tujuan (pakai kode negara)
-        const encodedMessage = encodeURIComponent(message);
-        window.open(`https://wa.me/${phone}?text=${encodedMessage}`, "_blank");
-    };
+        const phone = "6281234567890"
+        window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank")
+    }
 
     const structuredData = {
         "@context": "https://schema.org",
@@ -68,29 +73,58 @@ export default function FAQ() {
         })),
     }
 
+    if (!isReady) {
+        return (
+            <section className="relative py-20 container mx-auto px-6 md:px-0">
+                <div className="w-full items-center mb-12 flex justify-center">
+                    <Skeleton className="h-12 w-xl" />
+                </div>
+
+                <div className="flex md:flex-row flex-col gap-8">
+                    {/* list skeleton */}
+                    <div className="space-y-4 md:w-1/2">
+                        {Array.from({ length: 6 }).map((_, i) => (
+                            <Skeleton key={i} className="h-14 w-full rounded-md" />
+                        ))}
+                    </div>
+
+                    {/* right-side skeleton */}
+                    <div className="w-full md:w-1/2 flex flex-col items-center gap-6">
+                        <Skeleton className="w-64 h-64 rounded-lg" />
+                        <Skeleton className="h-6 w-52 rounded-md" />
+                        <Skeleton className="h-10 w-full max-w-sm rounded-md" />
+                    </div>
+                </div>
+            </section>
+        )
+    }
+
     return (
-        <section className="relative py-20 container mx-auto px-6 md:px-0" aria-label="Pertanyaan yang Sering Diajukan">
-            {/* Structured Data JSON-LD */}
+        <section
+            className="relative py-20 container mx-auto px-6 md:px-0"
+            aria-label="Pertanyaan yang Sering Diajukan"
+        >
+            {/* structured-data JSON-LD */}
             <Script
                 id="faq-jsonld"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
             />
 
+            {/* judul */}
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
                 Pertanyaan yang Sering Diajukan
             </h2>
+
             <div className="flex md:flex-row flex-col">
+                {/* daftar FAQ */}
                 <div className="space-y-4 md:w-1/2 mb-12 md:mb-0">
                     {faqs.map((faq, index) => {
                         const isOpen = index === activeIndex
                         const answerId = `faq-answer-${index}`
 
                         return (
-                            <div
-                                key={index}
-                                className="border-b border-subtle overflow-hidden"
-                            >
+                            <div key={index} className="border-b border-subtle overflow-hidden">
                                 <button
                                     onClick={() => toggleFAQ(index)}
                                     className="w-full flex items-center justify-between cursor-pointer px-5 py-4 text-left text-lg font-medium"
@@ -98,20 +132,17 @@ export default function FAQ() {
                                     aria-controls={answerId}
                                 >
                                     {faq.question}
-                                    {isOpen ? (
-                                        <ChevronUp className="w-5 h-5" />
-                                    ) : (
-                                        <ChevronDown className="w-5 h-5" />
-                                    )}
+                                    {isOpen ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
                                 </button>
 
                                 <AnimatePresence initial={false}>
                                     {isOpen && (
                                         <motion.div
                                             id={answerId}
-                                            initial={{ height: 0, opacity: 0 }}
-                                            animate={{ height: "auto", opacity: 1 }}
-                                            exit={{ height: 0, opacity: 0 }}
+                                            layout="position"
+                                            initial={{ opacity: 0 }}
+                                            animate={{ opacity: 1 }}
+                                            exit={{ opacity: 0 }}
                                             transition={{ duration: 0.3, ease: "easeInOut" }}
                                         >
                                             <div className="px-5 pb-4 pt-0 text-subtle text-base">
@@ -125,6 +156,7 @@ export default function FAQ() {
                     })}
                 </div>
 
+                {/* sisi kanan: ilustrasi + form WA */}
                 <div className="w-full md:w-1/2 flex flex-col items-center gap-8 justify-center text-center">
                     <div className="flex flex-col justify-center items-center gap-4">
                         <div className="relative w-64 h-64">
@@ -132,12 +164,15 @@ export default function FAQ() {
                                 src="/images/faq.png"
                                 alt="FAQ Illustration"
                                 fill
+                                loading="lazy"
                                 className="object-contain"
                             />
                         </div>
                         <div className="flex flex-col gap-1">
                             <h3 className="text-xl font-semibold">Ada pertanyaan lain?</h3>
-                            <p className="text-sm text-muted-foreground">Kirim pertanyaanmu langsung ke WhatsApp kami!</p>
+                            <p className="text-sm text-muted-foreground">
+                                Kirim pertanyaanmu langsung ke WhatsApp kami!
+                            </p>
                         </div>
                     </div>
 
@@ -147,16 +182,15 @@ export default function FAQ() {
                             <Input
                                 placeholder="Tulis pertanyaanmu di sini..."
                                 value={message}
-                                onChange={(e) => setMessage(e.target.value)}
-                                className="bg-white border border-muted-foreground"
+                                onChange={e => setMessage(e.target.value)}
+                                className="bg-white border border-muted-foreground rounded-full"
                             />
                         </div>
-                        <Button onClick={handleSend}>
-                            Kirim ke WhatsApp
-                        </Button>
+                        <Button onClick={handleSend}>Kirim ke WhatsApp</Button>
                     </div>
                 </div>
             </div>
         </section>
     )
 }
+
