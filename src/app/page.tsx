@@ -1,6 +1,5 @@
 import About from "@/components/landing/about"
 import CTA from "@/components/landing/CTA"
-import FAQ from "@/components/landing/faq"
 import Hero from "@/components/landing/hero"
 import PopularDestination from "@/components/landing/popularDestination"
 import Review from "@/components/landing/review"
@@ -14,7 +13,6 @@ export default function Home() {
       <PopularDestination />
       <WhyChooseUs />
       <Review />
-      <FAQ />
       <CTA />
     </main>
   )
