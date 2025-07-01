@@ -26,13 +26,13 @@ const listDestination = [
         title: 'Trekking Curug Panjang',
         label: 'Wisata',
         description: 'Eksplorasi hutan dan air terjun Curug Panjang dengan pemandu lokal.',
-        image: '/images/placeholder.JPG',
+        image: '/images/placeholder.jpg',
     },
     {
         title: 'Outbound Team Building',
         label: 'Travel',
         description: 'Paket outbound seru untuk meningkatkan kekompakan tim.',
-        image: '/images/placeholder.JPG',
+        image: '/images/placeholder.jpg',
     },
     {
         title: 'Archery & Panahan Alam Terbuka',
