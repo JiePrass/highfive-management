@@ -45,8 +45,8 @@ const servicesData = [
 
 export default function Services() {
     return (
-        <section className="bg-card pt-30 px-30" id="services">
-            <div className="container mx-auto flex flex-col justify-between gap-20">
+        <section className="bg-card pt-15 md:pt-30 md:px-30" id="services">
+            <div className="md:container md:mx-auto flex flex-col justify-between gap-20">
                 <div className="text-center">
                     <h2 className="text-3xl md:text-5xl font-bold mb-4">
                         Layanan <span className="text-primary">Highfive Management</span>
