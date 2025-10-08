@@ -6,13 +6,13 @@ export default function About() {
         <section className="grid grid-cols-1 md:grid-cols-12 items-center justify-center mx-auto container gap-6 px-6 md:px-0">
             {/* Kiri - Judul */}
             <div className="flex flex-col h-full justify-between md:col-span-5 text-xl font-bold">
-                <span>Highfive</span>
+                <span>Highfive Management</span>
                 <span>2025</span>
             </div>
 
             {/* Kanan - Headline dan gambar user */}
             <div className="md:col-span-7 space-y-4 md:space-y-16">
-                <h2 className="text-2xl md:text-5xl font-semibold text-gray-900 leading-snug">
+                <h2 className="text-2xl md:text-5xl font-semibold text-gray-900 leading-none">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis neque
                 </h2>
 

@@ -20,11 +20,10 @@ export default function HeroSection() {
                 {/* Left Text */}
                 <div>
                     <h1 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">
-                        Lorem Ipsum Dolor<br />
-                        Sit Amet<span className="text-primary"> Consectetur</span>
+                        Wujudkan Wisata Impian Bersama <span className="text-primary">Highfive Management</span>
                     </h1>
                     <p className="text-subtle text-sm mb-6">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis iste suscipit voluptas laboriosam quaerat vitae fuga natus eaque alias reprehenderit nulla, inventore minima aut tenetur aperiam, illum blanditiis voluptate quod!
+                        Event Organizer & MICE profesional yang menghadirkan acara berkesan, inovatif, dan terencana sempurna.
                     </p>
                     <div className="space-x-2 hidden md:flex">
                         <Button asChild>
@@ -32,7 +31,7 @@ export default function HeroSection() {
                         </Button>
 
                         <Button variant="secondary" asChild>
-                            <Link href="/">Jelajahi</Link>
+                            <Link href="/">Lihat Layanan</Link>
                         </Button>
                     </div>
                 </div>

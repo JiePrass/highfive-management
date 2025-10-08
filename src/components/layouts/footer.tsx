@@ -34,7 +34,7 @@ export default function Footer() {
 
     return (
         <footer
-            className="text-foreground py-8 overflow-hidden"
+            className="text-foreground bg-gray-50 py-8 overflow-hidden"
         >
             <div
                 className="container mx-auto px-6 md:px-0 flex flex-col md:flex-row md:justify-between md:items-center gap-6"
@@ -68,8 +68,8 @@ export default function Footer() {
                 className="container mx-auto px-6 md:px-0 py-8 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-64"
             >
                 <div className="flex flex-col justify-between">
-                    <h1 className="text-4xl md:text-5xl font-semibold">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    <h1 className="text-4xl md:text-6xl font-semibold">
+                        Great Team Great Result Great Everything
                     </h1>
 
                     <div className="flex md:hidden flex-wrap mt-8 gap-4">
@@ -84,27 +84,27 @@ export default function Footer() {
                         ))}
                     </div>
 
-                    <p className="text-xs text-[#595A5B] hidden md:flex">
+                    <p className="text-xs mt-12 text-[#595A5B] hidden md:flex">
                         &copy; {currentYear} Highfive Management seluruh hak cipta dilindungi
                     </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
-                    <div className="flex flex-col gap-2 text-lg">
-                        <h2 className="text-[#595A5B] font-semibold">Lokasi</h2>
-                        <p>Jl. Raya Tajur, Kp. Buntar, Kel. Muara Sari, Kec. Bogor Selatan</p>
+                    <div className="flex flex-col gap-2">
+                        <h2 className="text-[#595A5B] text-lg font-semibold">Lokasi</h2>
+                        <p>RukoFood Court Al JannahSchool Jl. Jambore No.5, Harjamukti, Depok</p>
                     </div>
-                    <div className="flex flex-col gap-2 text-lg">
-                        <h2 className="text-[#595A5B] font-semibold">Email</h2>
-                        <p>highfive@gmail.com</p>
+                    <div className="flex flex-col gap-2">
+                        <h2 className="text-[#595A5B] text-lg font-semibold">Email</h2>
+                        <p>infohighfivemanagement@gmail.com</p>
                     </div>
-                    <div className="flex flex-col gap-2 text-lg">
-                        <h2 className="text-[#595A5B] font-semibold">Kontak</h2>
+                    <div className="flex flex-col gap-2">
+                        <h2 className="text-[#595A5B] text-lg font-semibold">Kontak</h2>
                         <p>+62 838 7963 0647</p>
                         <p>+62 857 7025 3105</p>
                     </div>
-                    <div className="flex flex-col gap-2 text-lg">
-                        <h2 className="text-[#595A5B] font-semibold">Media Sosial</h2>
+                    <div className="flex flex-col gap-2">
+                        <h2 className="text-[#595A5B] text-lg font-semibold">Media Sosial</h2>
                         <div className="flex gap-2">
                             {["facebook", "youtube", "instagram", "twitter", "tiktok"].map((platform) => {
                                 const Icon = icons[platform as keyof typeof icons]

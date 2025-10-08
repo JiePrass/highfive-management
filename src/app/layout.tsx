@@ -12,7 +12,7 @@ const jakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.highfivemanagement.com"), // Ganti jika belum final
+  metadataBase: new URL("https://www.highfivemanagement.com"),
   title: {
     default: "HighFive Management | Solusi Wisata & Event Terbaik",
     template: "%s | HighFive Management",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     siteName: "HighFive Management",
     images: [
       {
-        url: "https://www.highfivemanagement.com/images/og-image.jpg", // Ganti dengan gambar asli
+        url: "https://www.highfivemanagement.com/images/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "HighFive Management Event & Tour",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     description:
       "Tour & Event Organizer terpercaya untuk wisata domestik, mancanegara, gathering, outbound, transportasi, dan banyak lagi.",
     images: ["https://www.highfivemanagement.com/images/og-image.jpg"],
-    creator: "@highfiveID", // Ganti jika punya akun Twitter
+    creator: "@highfiveID",
   },
   icons: {
     icon: "/favicon.png",

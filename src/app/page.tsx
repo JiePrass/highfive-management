@@ -1,4 +1,4 @@
-import About from "@/components/landing/about";
+import Services from "@/components/landing/services"
 import CTA from "@/components/landing/CTA";
 import FAQ from "@/components/landing/faq";
 import Hero from "@/components/landing/hero";
@@ -14,11 +14,11 @@ export default function Home() {
   return (
     <main className="space-y-24 md:space-y-32 bg-background">
       <Hero />
-      <About />
-      <PopularDestination />
+      <Services />
       <WhyChooseUs />
-      <ArticleSection articles={dataArticle} />
+      <PopularDestination />
       <Review />
+      <ArticleSection articles={dataArticle} />
       <FAQ />
       <CTA />
     </main>

@@ -23,15 +23,15 @@ export default function CTA() {
             <div className="absolute inset-0 bg-black/60 z-10" />
 
             {/* Content */}
-            <div className="relative z-20 text-center px-6 max-w-2xl text-white">
+            <div className="relative z-20 text-center px-6 max-w-4xl text-white">
                 <h2
                     id="cta-heading"
                     className="text-3xl md:text-4xl font-bold mb-4 leading-tight"
                 >
-                    Lorem Ipsum Dolor Sit Amet
+                    Siap Wujudkan Wisata yang Tak Terlupakan?
                 </h2>
                 <p className="text-sm md:text-xl mb-6">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio nemo perferendis consectetur aperiam laudantium quasi pariatur odit voluptate aspernatur est.
+                    Percayakan momen penting Anda pada Highfive Management. Tim profesional yang merancang setiap detail acara dengan kreativitas dan kesempurnaan.
                 </p>
                 <div className="flex gap-4 justify-center">
                     <Button asChild>

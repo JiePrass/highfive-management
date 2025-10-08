@@ -54,7 +54,7 @@ export default function PopularDestination() {
 
     return (
         <section className='mx-auto container'>
-            <div className="flex justify-between items-center mb-8 px-4">
+            <div className="flex justify-between items-center mb-8">
                 <h2 className="text-2xl md:text-4xl font-semibold">Destinasi Populer</h2>
                 <Button variant="outline" asChild>
                     <Link href="/paket">
