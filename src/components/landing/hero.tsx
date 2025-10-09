@@ -41,7 +41,7 @@ export default function HeroSection() {
                     {/* Big Card (mobile kiri, desktop center) */}
                     <div className="relative w-full h-68 md:h-100 md:mt-8">
                         <Image
-                            src="/images/placeholder.jpg"
+                            src="/images/image (3).jpg"
                             alt="Main Card"
                             fill
                             className="object-cover rounded-xl"
@@ -52,7 +52,7 @@ export default function HeroSection() {
                         {/* Top Small */}
                         <div className="relative w-full h-40 md:h-68">
                             <Image
-                                src="/images/placeholder.jpg"
+                                src="/images/image (1).jpg"
                                 alt="Top Right Card"
                                 fill
                                 className="object-cover rounded-xl"
@@ -62,7 +62,7 @@ export default function HeroSection() {
                         {/* Bottom Small */}
                         <div className="relative w-full h-24 md:h-40">
                             <Image
-                                src="/images/placeholder.jpg"
+                                src="/images/image (6).jpg"
                                 alt="Bottom Right Card"
                                 fill
                                 className="object-cover rounded-xl"

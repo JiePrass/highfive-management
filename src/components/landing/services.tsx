@@ -3,41 +3,49 @@ import Image from "next/image";
 const servicesData = [
     {
         title: "Event Organizer & M.I.C.E",
+        image: "/images/.jpg",
         description:
             "Perencanaan dan pelaksanaan berbagai acara seperti meeting, incentive, conference, dan exhibition dengan konsep inovatif dan hasil profesional.",
     },
     {
         title: "Tour Organizer Domestik & Internasional",
+        image: "/images/.jpg",
         description:
             "Layanan penyelenggaraan perjalanan wisata dan kunjungan kerja, baik dalam negeri maupun luar negeri, untuk memberikan pengalaman perjalanan terbaik.",
     },
     {
         title: "Outbound & Outdoor Activity",
+        image: "/images/.jpg",
         description:
             "Program team building, character building, workshop, hingga aktivitas outdoor lainnya untuk meningkatkan kerja sama tim dan pengembangan sumber daya manusia.",
     },
     {
         title: "Kelautan & Wisata Bahari",
+        image: "/images/.jpg",
         description:
             "Kegiatan seru di laut seperti trip pulau, diving, snorkeling, hingga petualangan outdoor yang memberikan pengalaman tak terlupakan.",
     },
     {
         title: "Layanan Transportasi",
+        image: "/images/transportasi.jpg",
         description:
             "Layanan transportasi yang nyaman, aman, dan terpercaya untuk mendukung kelancaran acara, tour, maupun perjalanan bisnis Anda.",
     },
     {
         title: "Wisata Minat Khusus",
+        image: "/images/hero2.JPG",
         description:
             "Program wisata unik dan eksklusif yang dirancang sesuai kebutuhan dan minat klien untuk memberikan pengalaman yang berbeda.",
     },
     {
         title: "Multimedia & Creative Design",
+        image: "/images/.jpg",
         description:
             "Layanan desain profesional termasuk desain 2D & 3D, branding event, pembuatan konten visual, hingga pengembangan website yang menarik dan modern.",
     },
     {
         title: "Photography & Videography",
+        image: "/images/.jpg",
         description:
             "Dokumentasikan momen terbaik acara Anda dengan tim profesional kami melalui hasil foto dan video berkualitas tinggi untuk setiap kebutuhan event.",
     },
@@ -63,7 +71,7 @@ export default function Services() {
                         >
                             {/* Background Image */}
                             <Image
-                                src="/images/placeholder.jpg"
+                                src={service.image || "/images/placeholder.jpg"}
                                 alt={service.title}
                                 fill
                                 className="object-cover transition-transform duration-500 group-hover:scale-105"

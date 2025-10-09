@@ -11,10 +11,10 @@ import { DestinationCard } from '../shared/destinationCard';
 
 const listDestination = [
     {
-        title: 'Offroad Seru Gunung Mas',
+        title: 'Offroad',
         label: 'Petualangan',
         description: 'Rasakan sensasi offroad menyusuri perkebunan teh Gunung Mas.',
-        image: '/images/placeholder.jpg',
+        image: '/images/image (9).jpg',
     },
     {
         title: 'Glamping Riverside Puncak',
@@ -41,10 +41,10 @@ const listDestination = [
         image: '/images/placeholder.jpg',
     },
     {
-        title: 'ATV Adventure Jalur Hutan Pinus',
+        title: 'ATV Adventure',
         label: 'Event Organizer',
         description: 'Nikmati perjalanan seru mengendarai ATV di jalur hutan pinus.',
-        image: '/images/placeholder.jpg',
+        image: '/images/image (8).jpg',
     },
 ];
 

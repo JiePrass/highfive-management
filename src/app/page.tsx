@@ -5,8 +5,8 @@ import Hero from "@/components/landing/hero";
 import PopularDestination from "@/components/landing/popularDestination";
 import Review from "@/components/landing/review";
 import WhyChooseUs from "@/components/landing/whyChooseUs";
-import ArticleSection from "@/components/landing/articleSection";
-import { dataArticle } from "@/data/articles";
+// import ArticleSection from "@/components/landing/articleSection";
+// import { dataArticle } from "@/data/articles";
 
 export const revalidate = 3600;
 
@@ -18,7 +18,7 @@ export default function Home() {
       <WhyChooseUs />
       <PopularDestination />
       <Review />
-      <ArticleSection articles={dataArticle} />
+      {/* <ArticleSection articles={dataArticle} /> */}
       <FAQ />
       <CTA />
     </main>
