@@ -46,7 +46,6 @@ export default function ReviewSection() {
     return (
         <section className="w-full bg-card py-20 relative overflow-hidden">
             <div className="container mx-auto">
-
                 {/* Navigasi tombol */}
                 <div className="flex justify-between items-center mb-8">
                     <h2 className="text-xl md:text-4xl font-medium max-w-xl text-foreground">

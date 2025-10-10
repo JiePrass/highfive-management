@@ -21,7 +21,7 @@ const servicesData = [
     },
     {
         title: "Kelautan & Wisata Bahari",
-        image: "/images/.jpg",
+        image: "/images/kelautan.jpg",
         description:
             "Kegiatan seru di laut seperti trip pulau, diving, snorkeling, hingga petualangan outdoor yang memberikan pengalaman tak terlupakan.",
     },
