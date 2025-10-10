@@ -3,19 +3,19 @@ import Image from "next/image";
 const servicesData = [
     {
         title: "Event Organizer & M.I.C.E",
-        image: "/images/.jpg",
+        image: "/images/placeholder.jpg",
         description:
             "Perencanaan dan pelaksanaan berbagai acara seperti meeting, incentive, conference, dan exhibition dengan konsep inovatif dan hasil profesional.",
     },
     {
         title: "Tour Organizer Domestik & Internasional",
-        image: "/images/.jpg",
+        image: "/images/placeholder.jpg",
         description:
             "Layanan penyelenggaraan perjalanan wisata dan kunjungan kerja, baik dalam negeri maupun luar negeri, untuk memberikan pengalaman perjalanan terbaik.",
     },
     {
         title: "Outbound & Outdoor Activity",
-        image: "/images/.jpg",
+        image: "/images/placeholder.jpg",
         description:
             "Program team building, character building, workshop, hingga aktivitas outdoor lainnya untuk meningkatkan kerja sama tim dan pengembangan sumber daya manusia.",
     },
@@ -39,13 +39,13 @@ const servicesData = [
     },
     {
         title: "Multimedia & Creative Design",
-        image: "/images/.jpg",
+        image: "/images/placeholder.jpg",
         description:
             "Layanan desain profesional termasuk desain 2D & 3D, branding event, pembuatan konten visual, hingga pengembangan website yang menarik dan modern.",
     },
     {
         title: "Photography & Videography",
-        image: "/images/.jpg",
+        image: "/images/placeholder.jpg",
         description:
             "Dokumentasikan momen terbaik acara Anda dengan tim profesional kami melalui hasil foto dan video berkualitas tinggi untuk setiap kebutuhan event.",
     },
