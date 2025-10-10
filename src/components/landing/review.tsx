@@ -8,21 +8,21 @@ import Image from 'next/image'
 
 const reviews = [
     {
-        name: 'Jeki Permana',
-        role: 'Siswa Kelas 11',
-        text: `Mode belajarnya keren! Bisa ngobrol sama AI kayak punya tutor pribadi. Aku jadi lebih fokus dan nggak gampang terdistraksi`,
-        image: '/images/placeholder.jpg',
+        name: 'Nyoman Budiarsa',
+        role: 'Touris Lokal',
+        text: `Tuk High Five Management : Adalah team yang solid yg memberikan kenyamanan dalam berwisata , memberikan lokasi pantasi yg memicu adrenalin , dan kenikmatan kuliner.`,
+        image: '/images/review.webp',
     },
     {
-        name: 'Alika Rahma',
-        role: 'Siswi Kelas 10',
-        text: `Fourtivity bikin belajar makin asyik! AI-nya paham banget cara ngajarin, aku jadi lebih cepat ngerti materi.`,
-        image: '/images/placeholder.jpg',
+        name: 'Nurfadillah Zahra',
+        role: 'Touris Lokal',
+        text: `Superrr duperrr seru traveling ditemani oleh highfive management,bikin pengalaman pertama aku main ke pulau semakin berkesan dengan pelayanan yang luar biasa istimewa…sukses selalu highfive management`,
+        image: '/images/review1.webp',
     },
     {
-        name: 'Raka Firmansyah',
-        role: 'Siswa Kelas 12',
-        text: `Nggak nyangka belajar bisa seseru ini. Fourtivity ngebantu aku siapin ujian dengan cara yang beda dan menarik.`,
+        name: 'Ade Firman',
+        role: 'Touris Lokal',
+        text: `Service yg sangat baik..humble dan pandai menciptakan suasana kekeluargaan dalam keseruan.pokoknya keren abislah..tetap pertahankan! Sukses selalu`,
         image: '/images/placeholder.jpg',
     },
 ]
@@ -45,7 +45,7 @@ export default function ReviewSection() {
 
     return (
         <section className="w-full bg-card py-20 relative overflow-hidden">
-            <div className="container mx-auto">
+            <div className="container mx-auto px-6 md:px-0">
                 {/* Navigasi tombol */}
                 <div className="flex justify-between items-center mb-8">
                     <h2 className="text-xl md:text-4xl font-medium max-w-xl text-foreground">
@@ -93,10 +93,10 @@ export default function ReviewSection() {
                     {/* Review Text */}
                     <div className="flex-1 max-w-sm flex flex-col gap-2 justify-center z-10 h-80">
                         <Quote className="w-8 h-8 mb-4 text-foreground" />
-                        <p className="text-2xl font-semibold text-foreground leading-relaxed">
+                        <p className="md:text-lg font-semibold text-foreground leading-relaxed">
                             {reviews[current].text.split('Aku')[0]}
                             <span className="text-muted-foreground">
-                                Aku{reviews[current].text.split('Aku')[1]}
+                                {reviews[current].text.split('Aku')[1]}
                             </span>
                         </p>
                         <div className="mt-6 text-sm text-gray-600">
