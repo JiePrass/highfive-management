@@ -4,6 +4,9 @@ import { Button } from "../ui/button";
 import Link from "next/link";
 
 export default function HeroSection() {
+    const phoneNumber = 6281389599499
+    const whatsappLink = `https://wa.me/${phoneNumber}`;
+
     return (
         <section className="relative w-full pt-8 overflow-hidden">
             {/* Background Map */}
@@ -27,11 +30,11 @@ export default function HeroSection() {
                     </p>
                     <div className="space-x-2 hidden md:flex">
                         <Button asChild>
-                            <Link href="/">Pesan Sekarang</Link>
+                            <Link href={whatsappLink}>Pesan Sekarang</Link>
                         </Button>
 
                         <Button variant="secondary" asChild>
-                            <Link href="/">Lihat Layanan</Link>
+                            <Link href="#services">Lihat Layanan</Link>
                         </Button>
                     </div>
                 </div>
@@ -72,11 +75,11 @@ export default function HeroSection() {
 
                     <div className="space-x-2 py-4 flex md:hidden col-span-2 justify-center">
                         <Button asChild>
-                            <Link href="/pesan">Pesan Sekarang</Link>
+                            <Link href={whatsappLink}>Pesan Sekarang</Link>
                         </Button>
 
                         <Button variant="outline" asChild>
-                            <Link href="/jelajah">Jelajahi</Link>
+                            <Link href="#services">Jelajahi</Link>
                         </Button>
                     </div>
                 </div>

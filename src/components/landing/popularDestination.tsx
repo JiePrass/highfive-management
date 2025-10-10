@@ -36,7 +36,7 @@ const listDestination = [
     },
     {
         title: 'Archery & Panahan Alam Terbuka',
-        label: 'Haji',
+        label: 'Outdoor Activity',
         description: 'Latih fokus dan ketangkasan dengan panahan outdoor di alam terbuka.',
         image: '/images/placeholder.jpg',
     },
@@ -53,7 +53,7 @@ export default function PopularDestination() {
     const swiperRef = useRef<SwiperClass | null>(null);
 
     return (
-        <section className='mx-auto container'>
+        <section className='mx-auto container' id="paket">
             <div className="flex justify-between items-center mb-8">
                 <h2 className="text-2xl md:text-4xl font-semibold">Destinasi Populer</h2>
                 <Button variant="outline" asChild>

@@ -5,6 +5,9 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
 export default function CTA() {
+    const phoneNumber = 6281389599499
+    const whatsappLink = `https://wa.me/${phoneNumber}`;
+
     return (
         <section
             className="relative w-full min-h-[400px] flex items-center justify-center overflow-hidden"
@@ -35,7 +38,7 @@ export default function CTA() {
                 </p>
                 <div className="flex gap-4 justify-center">
                     <Button asChild>
-                        <Link href="#paket">
+                        <Link href={whatsappLink}>
                             Pesan Sekarang
                         </Link>
                     </Button>
