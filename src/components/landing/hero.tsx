@@ -19,10 +19,10 @@ export default function HeroSection() {
                 />
             </div>
 
-            <div className="relative z-10 mx-auto px-6 md:px-0 container grid grid-cols-1 md:grid-cols-2 md:gap-10 items-center">
+            <div className="relative z-10 mx-auto px-6 container grid grid-cols-1 md:grid-cols-2 md:gap-10 items-center">
                 {/* Left Text */}
                 <div>
-                    <h1 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">
+                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
                         Wujudkan Wisata Impian Bersama <span className="text-primary">Highfive Management</span>
                     </h1>
                     <p className="text-subtle text-sm mb-6">
@@ -40,9 +40,9 @@ export default function HeroSection() {
                 </div>
 
                 {/* Responsive Image Layout */}
-                <div className="relative grid-cols-2 gap-4 md:gap-12 grid">
+                <div className="relative grid-cols-2 gap-4 lg:gap-12 grid">
                     {/* Big Card (mobile kiri, desktop center) */}
-                    <div className="relative w-full h-68 md:h-100 md:mt-8">
+                    <div className="relative w-full h-68 lg:h-100 md:mt-8">
                         <Image
                             src="/images/image (3).jpg"
                             alt="Main Card"
@@ -51,9 +51,9 @@ export default function HeroSection() {
                         />
                     </div>
 
-                    <div className="flex flex-col justify-between gap-4 md:gap-8">
+                    <div className="flex flex-col justify-between gap-4 lg:gap-8">
                         {/* Top Small */}
-                        <div className="relative w-full h-40 md:h-68">
+                        <div className="relative w-full h-40 lg:h-68">
                             <Image
                                 src="/images/image (1).jpg"
                                 alt="Top Right Card"
@@ -63,7 +63,7 @@ export default function HeroSection() {
                         </div>
 
                         {/* Bottom Small */}
-                        <div className="relative w-full h-24 md:h-40">
+                        <div className="relative w-full h-24 lg:h-40">
                             <Image
                                 src="/images/image (6).jpg"
                                 alt="Bottom Right Card"

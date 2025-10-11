@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function About() {
 
     return (
-        <section className="grid grid-cols-1 md:grid-cols-12 items-center justify-center mx-auto container gap-6 px-6 md:px-0">
+        <section className="grid grid-cols-1 md:grid-cols-12 items-center justify-center mx-auto container gap-6 px-6">
             {/* Kiri - Judul */}
             <div className="flex flex-col h-full justify-between md:col-span-5 text-xl font-bold">
                 <span>Highfive Management</span>

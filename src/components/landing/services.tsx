@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 
 const servicesData = [
@@ -33,7 +35,7 @@ const servicesData = [
     },
     {
         title: "Wisata Minat Khusus",
-        image: "/images/hero2.JPG",
+        image: "/images/rafting.JPG",
         description:
             "Program wisata unik dan eksklusif yang dirancang sesuai kebutuhan dan minat klien untuk memberikan pengalaman yang berbeda.",
     },
@@ -52,48 +54,67 @@ const servicesData = [
 ];
 
 export default function Services() {
+    const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+    const handleToggle = (index: number) => {
+        // Jika diklik lagi, tutup deskripsi
+        setActiveIndex(activeIndex === index ? null : index);
+    };
+
     return (
         <section className="bg-card pt-15 md:pt-30 md:px-30" id="services">
-            <div className="md:container md:mx-auto flex flex-col justify-between gap-20">
+            <div className="md:container md:mx-auto flex flex-col justify-between gap-16 lg:gap-20">
                 <div className="text-center">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-4">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
                         Layanan <span className="text-primary">Highfive Management</span>
                     </h2>
                     <p className="text-subtle max-w-xl mx-auto text-sm">
                         Kami menyediakan berbagai layanan terintegrasi dalam penyelenggaraan acara, perjalanan, dan multimedia
                     </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
-                    {servicesData.map((service, index) => (
-                        <div
-                            key={index}
-                            className="relative group w-full aspect-square overflow-hidden shadow-lg cursor-pointer"
-                        >
-                            {/* Background Image */}
-                            <Image
-                                src={service.image || "/images/placeholder.jpg"}
-                                alt={service.title}
-                                fill
-                                className="object-cover transition-transform duration-500 group-hover:scale-105"
-                            />
 
-                            <div className="absolute inset-0 z-0 pointer-events-none">
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                            </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+                    {servicesData.map((service, index) => {
+                        const isActive = activeIndex === index;
+                        return (
+                            <div
+                                key={index}
+                                onClick={() => handleToggle(index)}
+                                className="relative group w-full aspect-square overflow-hidden shadow-lg cursor-pointer"
+                            >
+                                {/* Background Image */}
+                                <Image
+                                    src={service.image || "/images/placeholder.jpg"}
+                                    alt={service.title}
+                                    fill
+                                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                />
 
-                            {/* Title (initial state) */}
-                            <div className="absolute text-white bottom-0 left-0 py-4 px-4 text-lg font-semibold z-10 transition-all duration-300 group-hover:translate-y-full">
-                                {service.title}
-                            </div>
+                                {/* Gradient Overlay */}
+                                <div className="absolute inset-0 z-0 pointer-events-none">
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                                </div>
 
-                            {/* Hover Overlay */}
-                            <div className="absolute inset-0 bg-white p-6 flex flex-col justify-center items-start 
-                        -translate-x-full group-hover:translate-x-0 transition-transform duration-500 z-20">
-                                <h3 className="text-2xl font-semibold mb-2">{service.title}</h3>
-                                <p className="text-sm leading-relaxed">{service.description}</p>
+                                {/* Title (initial state) */}
+                                <div
+                                    className={`absolute text-white bottom-0 left-0 py-4 px-4 text-lg font-semibold z-10 transition-all duration-300 
+                    group-hover:translate-y-full ${isActive ? "translate-y-full" : ""}`}
+                                >
+                                    {service.title}
+                                </div>
+
+                                {/* Hover / Click Overlay */}
+                                <div
+                                    className={`absolute inset-0 bg-white p-6 flex flex-col justify-center items-start transition-transform duration-500 z-20
+                    -translate-x-full group-hover:translate-x-0 
+                    ${isActive ? "translate-x-0" : ""}`}
+                                >
+                                    <h3 className="text-2xl font-semibold mb-2">{service.title}</h3>
+                                    <p className="text-sm leading-relaxed">{service.description}</p>
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
             </div>
         </section>

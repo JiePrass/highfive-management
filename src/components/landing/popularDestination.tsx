@@ -14,10 +14,10 @@ const listDestination = [
         title: 'Offroad',
         label: 'Petualangan',
         description: 'Rasakan sensasi offroad menyusuri perkebunan teh Gunung Mas.',
-        image: '/images/image (9).jpg',
+        image: '/images/offroad.jpg',
     },
     {
-        title: 'Glamping Riverside Puncak',
+        title: 'Camping Riverside Puncak',
         label: 'Keluarga',
         description: 'Nikmati pengalaman menginap di pinggir sungai dengan fasilitas modern.',
         image: '/images/placeholder.jpg',
@@ -35,16 +35,16 @@ const listDestination = [
         image: '/images/placeholder.jpg',
     },
     {
-        title: 'Archery & Panahan Alam Terbuka',
+        title: 'Rafting',
         label: 'Outdoor Activity',
-        description: 'Latih fokus dan ketangkasan dengan panahan outdoor di alam terbuka.',
-        image: '/images/placeholder.jpg',
+        description: 'Bersiaplah untuk petualangan arung jeram yang mendebarkan.',
+        image: '/images/rafting.JPG',
     },
     {
         title: 'ATV Adventure',
         label: 'Event Organizer',
         description: 'Nikmati perjalanan seru mengendarai ATV di jalur hutan pinus.',
-        image: '/images/image (8).jpg',
+        image: '/images/atv.jpg',
     },
 ];
 
@@ -54,8 +54,8 @@ export default function PopularDestination() {
 
     return (
         <section className='mx-auto container' id="paket">
-            <div className="flex justify-between items-center mb-8">
-                <h2 className="text-2xl md:text-4xl font-semibold">Destinasi Populer</h2>
+            <div className="flex justify-between items-center mb-8 px-6">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold">Destinasi Populer</h2>
                 <Button variant="outline" asChild>
                     <Link href="/paket">
                         Lihat Semua

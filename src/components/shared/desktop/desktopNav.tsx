@@ -15,7 +15,7 @@ const navItems = [
 export function DesktopNav() {
     const pathname = usePathname()
     return (
-        <nav className="hidden md:flex items-center space-x-4 relative">
+        <nav className="hidden lg:flex items-center space-x-4 relative">
             {navItems.map((item) =>
                     <Link
                         key={item.href}

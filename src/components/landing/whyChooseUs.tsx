@@ -6,14 +6,14 @@ export default function WhyChooseUs() {
     return (
         <section
             id="why-choose-us"
-            className="container mx-auto px-6 md:px-0 flex flex-col md:flex-row items-center gap-12"
+            className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12"
         >
             {/* Left Content */}
             <div className="w-full md:w-1/2">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
                     Kenapa Memilih <span className="text-primary">Highfive Management</span>?
                 </h2>
-                <p className="text-subtle text-sm md:text-base leading-relaxed mb-10">
+                <p className="text-subtle text-sm lg:text-base leading-relaxed mb-10">
                     Kami adalah <strong>Event Organizer profesional</strong> yang telah dipercaya berbagai perusahaan dan instansi
                     untuk menciptakan acara berkesan, inovatif, dan sukses di seluruh Indonesia.
                 </p>
@@ -62,7 +62,7 @@ export default function WhyChooseUs() {
                         alt="Highfive Management Event"
                         width={600}
                         height={500}
-                        className="object-cover aspect-[3/4] w-full h-full"
+                        className="object-cover aspect-[3/4] md:aspect-auto lg:aspect-[3/4] w-full h-full"
                     />
                 </div>
             </div>

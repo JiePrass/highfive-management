@@ -51,9 +51,8 @@ export function Header() {
                 className={`sticky top-0 z-50 bg-background transition-transform duration-300 ${showHeader ? "translate-y-0" : "-translate-y-full"
                     }`}
             >
-                <div className="container mx-auto oy-2">
-
-                    <div className="flex items-center justify-between mx-4 md:mx-0 py-4">
+                <div className="container mx-auto px-3">
+                    <div className="flex items-center justify-between py-4">
                         <Link href="/" className="text-lg font-semibold flex items-center gap-2">
                             <Image src="/images/HFE_Logo.png" alt="Logo" width={40} height={40} />
                             <span>Highfive Management</span>
@@ -62,8 +61,7 @@ export function Header() {
                         {/* Desktop nav */}
                         <DesktopNav />
 
-                        <div className="flex items-center space-x-2">
-
+                        <div className="flex items-center space-x-3 mr-2 md:mr-0">
                             {/* Desktop */}
                             <div className="hidden md:block">
                                 <SearchDropdownInput data={searchData} />
@@ -77,7 +75,7 @@ export function Header() {
 
                             {/* Hamburger button */}
                             <button
-                                className="md:hidden text-muted-foreground"
+                                className="lg:hidden text-muted-foreground"
                                 onClick={toggleMenu}
                                 aria-label="Toggle menu"
                             >

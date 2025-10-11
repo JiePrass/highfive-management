@@ -45,10 +45,10 @@ export default function ReviewSection() {
 
     return (
         <section className="w-full bg-card py-20 relative overflow-hidden">
-            <div className="container mx-auto px-6 md:px-0">
+            <div className="container mx-auto px-6">
                 {/* Navigasi tombol */}
                 <div className="flex justify-between items-center mb-8">
-                    <h2 className="text-xl md:text-4xl font-medium max-w-xl text-foreground">
+                    <h2 className="text-xl md:text-4xl lg:text-5xl font-medium max-w-xl text-foreground">
                         Kata mereka tentang  <span className="text-primary font-semibold">Highfive Management</span>
                     </h2>
                     <div className="flex items-center gap-2 justify-center md:justify-end col-span-7">
@@ -69,7 +69,7 @@ export default function ReviewSection() {
 
                 <div className="relative flex flex-col md:flex-row items-start gap-8">
                     {/* Review Image */}
-                    <div className="flex-1 w-full md:max-w-80 relative z-10">
+                    <div className="flex-1 w-full lg:max-w-80 relative z-10">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={current}
@@ -77,7 +77,7 @@ export default function ReviewSection() {
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 0, x: -50 }}
                                 transition={{ duration: 0.4 }}
-                                className="rounded-xl w-full md:w-80 h-80 overflow-hidden shadow-md"
+                                className="rounded-xl w-full lg:w-80 h-80 overflow-hidden shadow-lg"
                             >
                                 <Image
                                     src={reviews[current].image}
@@ -93,7 +93,7 @@ export default function ReviewSection() {
                     {/* Review Text */}
                     <div className="flex-1 max-w-sm flex flex-col gap-2 justify-center z-10 h-80">
                         <Quote className="w-8 h-8 mb-4 text-foreground" />
-                        <p className="md:text-lg font-semibold text-foreground leading-relaxed">
+                        <p className="lg:text-lg font-semibold text-foreground leading-relaxed">
                             {reviews[current].text.split('Aku')[0]}
                             <span className="text-muted-foreground">
                                 {reviews[current].text.split('Aku')[1]}
@@ -105,7 +105,7 @@ export default function ReviewSection() {
                     </div>
 
                     {/* Next Preview */}
-                    <div className="absolute hidden md:block top-1/2 right-0 -translate-y-1/2 w-[420px] overflow-hidden">
+                    <div className="absolute hidden lg:block top-1/2 right-0 -translate-y-1/2 w-[420px] overflow-hidden">
                         <div className="flex gap-4 pl-6">
                             {previewItems.map((review, idx) => (
                                 <motion.div

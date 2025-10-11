@@ -37,7 +37,7 @@ export default function Footer() {
             className="text-foreground bg-gray-50 py-8 overflow-hidden"
         >
             <div
-                className="container mx-auto px-6 md:px-0 flex flex-col md:flex-row md:justify-between md:items-center gap-6"
+                className="container mx-auto px-6 flex flex-col md:flex-row md:justify-between md:items-center gap-6"
 
             >
                 <div className="flex items-center">
@@ -65,7 +65,7 @@ export default function Footer() {
             </div>
 
             <div
-                className="container mx-auto px-6 md:px-0 py-8 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-64"
+                className="container mx-auto px-6 py-8 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-64"
             >
                 <div className="flex flex-col justify-between">
                     <h1 className="text-4xl md:text-6xl font-semibold">
@@ -118,7 +118,7 @@ export default function Footer() {
                 </div>
             </div>
 
-            <div className="container mx-auto px-4 md:px-0">
+            <div className="container mx-auto px-4">
                 <div className="flex justify-center items-center">
                     <h1 className="text-[90px] md:text-[323px] cursor-default text-neutral-800 mb-8 md:mb-16 leading-none font-semibold text-center">
                         Highfive

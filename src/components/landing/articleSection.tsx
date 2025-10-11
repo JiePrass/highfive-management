@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function ArticleSection({ articles }: { articles: Article[] }) {
     return (
-        <section className="container mx-auto px-6 md:px-0" id="articles">
+        <section className="container mx-auto px-6" id="articles">
             <div className="flex justify-between items-center mb-8">
                 <h2 className="text-2xl md:text-4xl font-semibold">Artikel Populer</h2>
                 <Button asChild>

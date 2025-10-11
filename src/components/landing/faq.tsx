@@ -56,7 +56,7 @@ export default function FAQ() {
         setActiveIndex(prev => (prev === index ? null : index))
 
     const handleSend = () => {
-        const phone = "6281234567890"
+        const phone = "6281389599499"
         window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank")
     }
 
@@ -75,7 +75,7 @@ export default function FAQ() {
 
     if (!isReady) {
         return (
-            <section className="relative container mx-auto px-6 md:px-0">
+            <section className="relative container mx-auto px-6">
                 <div className="w-full items-center mb-12 flex justify-center">
                     <Skeleton className="h-12 w-xl" />
                 </div>
@@ -101,7 +101,7 @@ export default function FAQ() {
 
     return (
         <section
-            className="relative py-20 container mx-auto px-6 md:px-0"
+            className="relative py-20 container mx-auto px-6"
             aria-label="Pertanyaan yang Sering Diajukan"
         >
             {/* structured-data JSON-LD */}
@@ -116,7 +116,7 @@ export default function FAQ() {
                 Pertanyaan yang Sering Diajukan
             </h2>
 
-            <div className="flex md:flex-row flex-col">
+            <div className="flex md:flex-row flex-col gap-10">
                 {/* daftar FAQ */}
                 <div className="space-y-4 md:w-1/2 mb-12 md:mb-0">
                     {faqs.map((faq, index) => {
